@@ -29,24 +29,27 @@ possibleChoices.forEach( possibleChoice => possibleChoice.addEventListener('clic
  }
 
  function generateResult () {
-    if(computerChoice === userChoice) {
-        result = 'its a draw'
-    }
-    if(computerChoice === 'rock' && userChoice=== 'paper') {
-        result = 'Computer wins'
-    }
-    if(computerChoice === 'paper' && userChoice=== 'scissor') {
-        result = 'User wins'
-    }
-    if(computerChoice === 'paper' && userChoice=== 'rock') {
-        result = 'Computer wins'
-    }
-    if(computerChoice === 'rock' && userChoice=== 'scissor') {
-        result = 'User wins'
-    }
-    if(computerChoice === 'scissor' && userChoice=== 'paper') {
-        result = 'Computer wins'
-    }
+    if (computerChoice === userChoice) {
+        result = 'its a draw!'
+      }
+      if (computerChoice === 'rock' && userChoice === "paper") {
+        result = 'you win!'
+      }
+      if (computerChoice === 'rock' && userChoice === "scissors") {
+        result = 'you lost!'
+      }
+      if (computerChoice === 'paper' && userChoice === "scissors") {
+        result = 'you win!'
+      }
+      if (computerChoice === 'paper' && userChoice === "rock") {
+        result = 'you lose!'
+      }
+      if (computerChoice === 'scissors' && userChoice === "rock") {
+        result = 'you win!'
+      }
+      if (computerChoice === 'scissors' && userChoice === "paper") {
+        result = 'you lose!'
+      }
     resultDisplay.innerHTML = result
  }
 
